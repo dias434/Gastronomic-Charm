@@ -1,0 +1,135 @@
+/* Resetando alguns estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o vídeo de fundo */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca o vídeo atrás de todo o conteúdo */
+    overflow: hidden;
+}
+
+#bg-video {
+    object-fit: cover; /* Garante que o vídeo ocupe toda a tela */
+    width: 100%;
+    height: 100%;
+    object-position: center center;
+}
+
+/* Resetando margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #fff9f9;
+}
+
+/* Estilo dos botões de categorias */
+.menu-categorias {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.menu-categorias button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu-categorias button:hover {
+    background-color: #2980b9;
+}
+
+/* Estilo para as seções do menu */
+.menu-section {
+    display: none; /* As seções começam ocultas */
+    margin-bottom: 20px;
+}
+
+.menu-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;  /* Centraliza os títulos das categorias */
+    color: #f9fdff;  /* Cor da letra dos títulos */
+    padding-left: -10px; /* Ajuste este valor conforme necessário */
+}
+
+/* Estilo da lista */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estilo para cada item do menu */
+li {
+    display: flex;
+    justify-content: space-between;  /* Alinha os itens na extremidade (esquerda para nome e direita para preço) */
+    align-items: center;            /* Alinha verticalmente o conteúdo (nome e preço) */
+    padding: 8px 0;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para os nomes dos pratos */
+.dish-name, .drink-name {
+    font-weight: bold;
+    color: #ffffff;  /* Cor do nome dos pratos */
+    flex: 1;  /* Faz o nome ocupar todo o espaço disponível, para empurrar o nome para a direita */
+}
+
+/* Estilo para os preços */
+.price {
+    font-style: italic;
+    color: #fffcfb;
+    padding-left: 5px; /* Espaçamento entre o nome e o preço */
+}
+
+
+/* Estilo para o botão de "Início" */
+.btn-inicio {
+    background-color: #3498db; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    padding: 15px 32px; /* Tamanho do botão */
+    text-align: center; /* Alinha o texto */
+    text-decoration: none; /* Remove o sublinhado */
+    display: inline-block; /* Exibe o botão em linha */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Mostra um cursor de ponteiro */
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave de cor */
+}
+
+/* Estilo do botão ao passar o mouse */
+.btn-inicio:hover {
+    background-color: #2980b9; /* Cor de fundo quando o mouse passa sobre o botão */
+}

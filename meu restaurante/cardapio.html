@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Gastronomic Charm</title>
+    <link rel="icon" href="https://th.bing.com/th/id/OIP.R0znzI6MFh_GikZpIiZeqQHaHa?rs=1&pid=ImgDetMain" type="img/x-icon">
+    <link rel="stylesheet" href="assets/css/car.css">
+</head>
+<body>
+    <a href="index.html">
+        <button class="btn-inicio">Início</button>
+    </a>
+
+    <!-- Vídeo de fundo -->
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="cardapio.mp4" type="video/mp4">
+            Seu navegador não suporta o formato de vídeo.
+        </video>
+    </div>
+
+    <!-- Conteúdo do cardápio -->
+    <header>
+        <h1>Cardápio - Gastronomic Charm</h1>
+    </header>
+
+    <section class="menu">
+        <div class="menu-categorias">
+            <button onclick="showCategory('entradas')">Entradas</button>
+            <button onclick="showCategory('pratos-principais')">Pratos Principais</button>
+            <button onclick="showCategory('sobremesas')">Sobremesas</button>
+            <button onclick="showCategory('bebidas')">Bebidas</button>
+        </div>
+
+        <!-- Seções do Cardápio (inicialmente escondidas) -->
+        <div id="entradas" class="menu-section">
+            <h2>Entradas</h2>
+            <ul>
+                <li><span class="dish-name">Bruschetta de Tomate e Manjericão</span><span class="price">R$ 20,00</span></li>
+                <li><span class="dish-name">Ceviche de Salmão</span><span class="price">R$ 35,00</span></li>
+                <li><span class="dish-name">Carpaccio de Carne</span><span class="price">R$ 28,00</span></li>
+            </ul>
+        </div>
+
+        <div id="pratos-principais" class="menu-section">
+            <h2>Pratos Principais</h2>
+            <ul>
+                <li><span class="dish-name">Risoto de Cogumelos</span><span class="price">R$ 45,00</span></li>
+                <li><span class="dish-name">Filet Mignon ao Molho de Vinho</span><span class="price">R$ 68,00</span></li>
+                <li><span class="dish-name">Peixe Grelhado com Purê de Batata</span><span class="price">R$ 50,00</span></li>
+            </ul>
+        </div>
+
+        <div id="sobremesas" class="menu-section">
+            <h2>Sobremesas</h2>
+            <ul>
+                <li><span class="dish-name">Tiramisu</span><span class="price">R$ 18,00</span></li>
+                <li><span class="dish-name">Petit Gateau</span><span class="price">R$ 22,00</span></li>
+                <li><span class="dish-name">Mousse de Chocolate</span><span class="price">R$ 15,00</span></li>
+            </ul>
+        </div>
+
+        <div id="bebidas" class="menu-section">
+            <h2>Bebidas</h2>
+            <ul>
+                <li><span class="drink-name">Água Mineral</span><span class="price">R$ 5,00</span></li>
+                <li><span class="drink-name">Coca-Cola Lata</span><span class="price">R$ 8,00</span></li>
+                <li><span class="drink-name">Suco Natural</span><span class="price">R$ 10,00</span></li>
+                <li><span class="drink-name">Caipirinha</span><span class="price">R$ 25,00</span></li>
+                <li><span class="drink-name">Drinks Especiais</span><span class="price">R$ 30,00</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

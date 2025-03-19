@@ -1,0 +1,99 @@
+body {
+    margin: 0; /* Remove a margem padrão do body */
+    font-family: Arial, sans-serif; /* Define uma fonte padrão */
+}
+
+h1 {
+    text-align: center; /* Centraliza o título */
+    margin: -10px 0; /* Adiciona margem ao título */
+    background-image: url('https://img.freepik.com/fotos-gratis/superficie-de-madeira-a-procura-de-mesas-no-restaurante_23-2147701349.jpg?size=626&ext=jpg'); /* Adiciona a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o espaço do h1 */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-position: center; /* Centraliza a imagem */
+    color: rgb(255, 255, 255); /* Cor do texto */
+    padding: 50px 0; /* Adiciona espaço interno ao redor do texto */
+}
+
+header {
+    display: flex; /* Usar flexbox para alinhar o conteúdo */
+    justify-content: center; /* Alinha o conteúdo à direita */
+    padding: 10px 20px; /* Adiciona um pouco de espaço ao redor */
+    background-color: #0e0b0b; /* Cor de fundo do cabeçalho */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para o cabeçalho */
+}
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    display: flex; /* Exibe os itens da lista em linha */
+}
+
+nav ul li {
+    margin-left: 45px; /* Espaçamento entre os itens do menu */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #e4d7d7; /* Cor do texto dos links */
+    font-weight: bold; /* Deixa o texto em negrito */
+    transition: color 0.3s; /* Transição suave para a cor */
+}
+
+nav ul li a:hover {
+    color: #007BFF; /* Cor ao passar o mouse sobre o link */
+}
+
+body {
+    margin: 0; /* Remove a margem padrão do body */
+    font-family: Arial, sans-serif; /* Define uma fonte padrão */
+    background-image: url('https://wallpaperaccess.com/full/2539405.jpg'); /* URL da imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o espaço da tela */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Faz com que a imagem fique fixa ao rolar a página */
+    height: 100vh; /* Faz com que o body ocupe 100% da altura da tela */
+    width: 100%; /* Largura total */
+}
+
+
+.video-container {
+    position: fixed; /* Fixa o vídeo na tela */
+    left: 1%; /* Alinha o vídeo à esquerda */
+    top: 200px; /* Alinha o vídeo ao topo */
+    width: 40%; /* Define a largura do vídeo (ajuste conforme necessário) */
+    height: 150%; /* Define a altura do vídeo para ocupar toda a altura da tela */
+    object-fit: cover; /* Faz o vídeo cobrir todo o espaço da div */
+}
+
+.text-content {
+    margin-left: 42%; /* Define a distância à esquerda do conteúdo */
+    padding: 20px; /* Adiciona um espaço de 20px entre o conteúdo e as bordas */
+    color: aliceblue;
+}
+
+.img-chef {
+    position: absolute; /* Permite posicionar a div em relação ao body */
+    bottom: 20px; /* Distância do fundo da página */
+    left: 1120px; /* Distância da esquerda da página */
+    width: 150px; /* Largura da div (ajuste conforme necessário) */
+    height: auto; /* Altura automática para manter a proporção */
+}
+
+.chef-image {
+    width: 200%; /* Faz a imagem ocupar 100% da largura da div */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas (opcional) */
+}
+
+.logo-container {
+    position: absolute; /* Posiciona a logo no canto */
+    top: 5px; /* Distância do topo da tela */
+    left: 25px; /* Distância da esquerda da tela */
+}
+
+.logo {
+    width: 150px; /* Largura da logo (ajuste conforme necessário) */
+    height: 105px; /* Altura da logo (ajuste conforme necessário) */
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Faz a imagem ocupar todo o espaço da div sem distorcer */
+}
