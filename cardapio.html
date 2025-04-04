@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Premium - Gastronomic Charm</title>
+    <link rel="icon" href="https://th.bing.com/th/id/OIP.R0znzI6MFh_GikZpIiZeqQHaHa?rs=1&pid=ImgDetMain">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/cardapio.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        body {
+            background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            z-index: -1;
+        }
+        
+        .btn-inicio {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #8B0000, #A52A2A);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .btn-inicio:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #D4AF37;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+        
+        .menu {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px 50px;
+        }
+        
+        .menu-categorias {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .menu-categorias button {
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #8B0000, #A52A2A);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .menu-categorias button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .menu-section {
+            background: rgba(20, 20, 20, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .menu-section h2 {
+            color: #D4AF37;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.5);
+        }
+        
+        .menu-section ul {
+            list-style: none;
+        }
+        
+        .menu-section li {
+            padding: 15px 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .menu-section li:last-child {
+            border-bottom: none;
+        }
+        
+        .dish-name, .drink-name {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #fff;
+        }
+        
+        .price {
+            background: #D4AF37;
+            color: #000;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .menu-section.active {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .menu-categorias {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .menu-categorias button {
+                width: 80%;
+            }
+            
+            .menu-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">
+        <button class="btn-inicio"><i class="fas fa-arrow-left"></i> Início</button>
+    </a>
+
+    <header>
+        <h1><i class="fas fa-utensils"></i> Cardápio Premium</h1>
+        <p style="color: #aaa; font-style: italic;">Gastronomic Charm - Experiências que encantam o paladar</p>
+    </header>
+
+    <section class="menu">
+        <div class="menu-categorias">
+            <button onclick="showCategory('entradas')"><i class="fas fa-bread-slice"></i> Entradas</button>
+            <button onclick="showCategory('pratos-principais')"><i class="fas fa-drumstick-bite"></i> Pratos Principais</button>
+            <button onclick="showCategory('sobremesas')"><i class="fas fa-ice-cream"></i> Sobremesas</button>
+            <button onclick="showCategory('bebidas')"><i class="fas fa-glass-martini-alt"></i> Bebidas</button>
+        </div>
+
+        <!-- Seções do Cardápio -->
+        <div id="entradas" class="menu-section active">
+            <h2><i class="fas fa-bread-slice"></i> Entradas</h2>
+            <ul>
+                <li>
+                    <span class="dish-name">Bruschetta de Tomate e Manjericão</span>
+                    <span class="price">R$ 20,00</span>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 5px;">Pão italiano crocante com tomates frescos, manjericão e azeite de oliva extra virgem</p>
+                </li>
+                <li>
+                    <span class="dish-name">Ceviche de Salmão</span>
+                    <span class="price">R$ 35,00</span>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 5px;">Salmão fresco marinado em limão siciliano, cebola roxa e coentro</p>
+                </li>
+                <li>
+                    <span class="dish-name">Carpaccio de Carne</span>
+                    <span class="price">R$ 28,00</span>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 5px;">Finas fatias de filé mignon cru, queijo parmesão e rúcula</p>
+                </li>
+            </ul>
+        </div>
+
+        <div id="pratos-principais" class="menu-section">
+            <h2><i class="fas fa-drumstick-bite"></i> Pratos Principais</h2>
+            <ul>
+                <li>
+                    <span class="dish-name">Risoto de Cogumelos</span>
+                    <span class="price">R$ 45,00</span>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 5px;">Arroz arbóreo cremoso com mix de cogumelos frescos e trufa negra</p>
+                </li>
+                <li>
+                    <span class="dish-name">Filet Mignon ao Molho de Vinho</span>
+                    <span class="price">R$ 68,00</span>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 5px;">Corte nobre grelhado, servido com molho de vinho tinto redução e batatas rústicas</p>
+                </li>
+                <li>
+                    <span class="dish-name">Peixe Grelhado com Purê de Batata</span>
+                    <span class="price">R$ 50,00</span>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 5px;">Filé de robalo grelhado com purê de batata trufado e legumes da estação</p>
+                </li>
+            </ul>
+        </div>
+
+        <div id="sobremesas" class="menu-section">
+            <h2><i class="fas fa-ice-cream"></i> Sobremesas</h2>
+            <ul>
+                <li>
+                    <span class="dish-name">Tiramisu</span>
+                    <span class="price">R$ 18,00</span>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 5px;">Clássico italiano com café, mascarpone e cacau em pó</p>
+                </li>
+                <li>
+                    <span class="dish-name">Petit Gateau</span>
+                    <span class="price">R$ 22,00</span>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 5px;">Bolinho de chocolate com núcleo derretido, acompanhado de sorvete de baunilha</p>
+                </li>
+                <li>
+                    <span class="dish-name">Mousse de Chocolate</span>
+                    <span class="price">R$ 15,00</span>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 5px;">Mousse cremosa de chocolate belga com raspas de chocolate</p>
+                </li>
+            </ul>
+        </div>
+
+        <div id="bebidas" class="menu-section">
+            <h2><i class="fas fa-glass-martini-alt"></i> Bebidas</h2>
+            <ul>
+                <li>
+                    <span class="drink-name">Água Mineral</span>
+                    <span class="price">R$ 5,00</span>
+                </li>
+                <li>
+                    <span class="drink-name">Coca-Cola Lata</span>
+                    <span class="price">R$ 8,00</span>
+                </li>
+                <li>
+                    <span class="drink-name">Suco Natural</span>
+                    <span class="price">R$ 10,00</span>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 5px;">Sabores: laranja, abacaxi com hortelã ou maracujá</p>
+                </li>
+                <li>
+                    <span class="drink-name">Caipirinha</span>
+                    <span class="price">R$ 25,00</span>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 5px;">Tradicional ou sabores: morango, maracujá ou kiwi</p>
+                </li>
+                <li>
+                    <span class="drink-name">Drinks Especiais</span>
+                    <span class="price">R$ 30,00</span>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 5px;">Experimente nosso signature drink "Charm de Ouro" com vodka, licor de maracujá e folha de ouro</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        function showCategory(categoryId) {
+            // Esconde todas as seções
+            document.querySelectorAll('.menu-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Mostra apenas a seção selecionada
+            document.getElementById(categoryId).classList.add('active');
+        }
+        
+        // Mostra a primeira categoria por padrão
+        document.addEventListener('DOMContentLoaded', function() {
+            showCategory('entradas');
+        });
+    </script>
+</body>
+</html>

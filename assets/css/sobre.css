@@ -1,0 +1,51 @@
+body {
+    margin: 0; /* Remove a margem padrão do body */
+    font-family: Arial, sans-serif; /* Define uma fonte padrão */
+    background-image: url('https://wallpaperaccess.com/full/2539405.jpg'); /* URL da imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o espaço da tela */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Faz com que a imagem fique fixa ao rolar a página */
+    height: 90vh; /* Faz com que o body ocupe 100% da altura da tela */
+    width: 90%; /* Largura total */
+}
+
+h1, h3 {
+    margin: 0; /* Remove margens padrão */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    color: #ffffff; /* Define a cor da fonte como branco */
+}
+
+.btn-inicio {
+    background-color: #3498db; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    padding: 15px 32px; /* Tamanho do botão */
+    text-align: center; /* Alinha o texto */
+    text-decoration: none; /* Remove o sublinhado */
+    display: inline-block; /* Exibe o botão em linha */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Mostra um cursor de ponteiro */
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave de cor */
+}
+
+/* Estilo do botão ao passar o mouse */
+.btn-inicio:hover {
+    background-color: #2980b9; /* Cor de fundo quando o mouse passa sobre o botão */
+}
+
+.img-chef {
+    position: absolute; /* Permite posicionar a div em relação ao body */
+    bottom: 20px; /* Distância do fundo da página */
+    left: 1270px; /* Distância da esquerda da página */
+    width: 220px; /* Largura da div (ajuste conforme necessário) */
+    height: auto; /* Altura automática para manter a proporção */
+}
+
+.chef-image {
+    width: 250%; /* Faz a imagem ocupar 100% da largura da div */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas (opcional) */
+}

@@ -1,0 +1,120 @@
+/* Estilo geral */
+
+body {
+    margin: 0; /* Remove a margem padrão do body */
+    font-family: Arial, sans-serif; /* Define uma fonte padrão */
+    background-image: url('https://wallpaperaccess.com/full/2539405.jpg'); /* URL da imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o espaço da tela */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Faz com que a imagem fique fixa ao rolar a página */
+    height: 100vh; /* Faz com que o body ocupe 100% da altura da tela */
+    width: 100%; /* Largura total */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+.contact-info {
+    margin-top: 30px;
+}
+
+.contact-info h2 {
+    font-size: 1.5em;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 1.2em;
+    margin: 0 15px;
+    color: #555;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.social-icon i {
+    margin-right: 10px;
+}
+
+.social-icon:hover {
+    color: #007bff;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icon {
+        margin: 10px 0;
+    }
+}
+
+/* Estilo para o botão de "Início" */
+.btn-inicio {
+    background-color: #3498db; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    padding: 15px 32px; /* Tamanho do botão */
+    text-align: center; /* Alinha o texto */
+    text-decoration: none; /* Remove o sublinhado */
+    display: inline-block; /* Exibe o botão em linha */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Mostra um cursor de ponteiro */
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave de cor */
+    margin-left: 25px; /* Adiciona um espaço à esquerda do botão */
+}
+
+/* Estilo do botão ao passar o mouse */
+.btn-inicio:hover {
+    background-color: #2980b9; /* Cor de fundo quando o mouse passa sobre o botão */
+}
